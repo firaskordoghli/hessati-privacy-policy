@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hessati — Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #14161a; }
+    a { color: #7fb2ff; }
+    hr { border-color: #333; }
+    .lang-switch button { background: #22252b; color: #e8e8e8; border-color: #3a3d44; }
+    .lang-switch button.active { background: #3a5ba0; color: #fff; border-color: #3a5ba0; }
+    table, th, td { border-color: #3a3d44 !important; }
+    th { background: #22252b !important; }
+  }
+  h1 { font-size: 1.6em; margin-bottom: 4px; }
+  h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+  .meta { color: #777; font-size: 0.92em; margin-bottom: 24px; }
+  .lang-switch { display: flex; gap: 8px; margin-bottom: 28px; }
+  .lang-switch button {
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+  .lang-switch button.active { background: #3a5ba0; color: #fff; border-color: #3a5ba0; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; font-size: 0.95em; }
+  th { background: #f5f5f5; }
+  .lang-section[hidden] { display: none; }
+  .lang-section[dir="rtl"] th, .lang-section[dir="rtl"] td { text-align: right; }
+  ul { padding-inline-start: 22px; }
+  li { margin-bottom: 6px; }
+  code { background: rgba(127,127,127,0.15); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+</style>
+</head>
+<body>
+
+<div class="lang-switch" role="tablist" aria-label="Language">
+  <button type="button" data-lang="en" class="active">English</button>
+  <button type="button" data-lang="fr">Français</button>
+  <button type="button" data-lang="ar">العربية</button>
+</div>
+
+<!-- ENGLISH -->
+<section class="lang-section" id="lang-en" dir="ltr" lang="en">
+  <h1>Privacy Policy — Hessati</h1>
+  <p class="meta">Last updated: July 23, 2026</p>
+
+  <p>Hessati ("the app") is an offline attendance and payment tracker for private tutors and
+  small-class teachers. This policy explains what data the app handles and, just as importantly,
+  what it does not.</p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>Hessati works fully offline. All group, student, attendance, and payment data you enter
+      stays on your device, in the app's local database.</li>
+    <li>We do not operate an account system, and there is no cloud sync of your teaching data.</li>
+    <li>The app makes exactly one type of network call — to validate your access code or free
+      trial — described below. No student or group data is ever included in it.</li>
+    <li>Hessati contains no advertising and no third-party analytics or tracking SDKs.</li>
+  </ul>
+
+  <h2>Data you enter into the app</h2>
+  <p>The following information is stored locally on your device only, in the app's own database:</p>
+  <table>
+    <tr><th>Data</th><th>Purpose</th><th>Where it's stored</th></tr>
+    <tr><td>Group names</td><td>Organize students into classes/cohorts</td><td>On-device only</td></tr>
+    <tr><td>Student names and optional phone numbers</td><td>Identify students; tap-to-dial a parent/student</td><td>On-device only</td></tr>
+    <tr><td>Attendance records (session dates, present/absent)</td><td>Calculate each student's balance</td><td>On-device only</td></tr>
+    <tr><td>Payment records (sessions covered, date)</td><td>Calculate each student's balance</td><td>On-device only</td></tr>
+    <tr><td>App settings (threshold, language, theme)</td><td>Personalize the app</td><td>On-device only</td></tr>
+  </table>
+  <p>None of this data is transmitted anywhere unless <strong>you</strong> deliberately export it
+  (see "Backup and export" below). We, the developer, never receive it and have no way to access
+  it remotely.</p>
+
+  <h2>Backup and export (your action, your choice)</h2>
+  <p>Hessati lets you export a full backup (JSON) or a spreadsheet (CSV/Excel) of your data using
+  Android's standard file picker. You choose the destination — local storage, an SD card, a cloud
+  drive, email, etc. This is entirely under your control; the app itself does not upload this file
+  anywhere. Importing a backup replaces the app's local database with the file's contents, again
+  entirely on-device.</p>
+
+  <h2>Access code / free trial validation (the one network call)</h2>
+  <p>Hessati requires a developer-issued access code (or a one-time 30-day free trial) to unlock
+  the app, since it's distributed directly by the developer rather than through a Play Store
+  subscription. To check whether a code or trial is valid, the app contacts our validation server
+  with only:</p>
+  <ul>
+    <li>The access code you entered (or a trial-start request), and</li>
+    <li>A device identifier, used solely to enforce one code/device (or a limited number of
+      devices for multi-device codes) and to prevent a single device from claiming more than one
+      free trial.</li>
+  </ul>
+  <p>No group, student, attendance, or payment data is included in this call, ever. During an
+  active free trial or a previously validated code, everyday use of the app remains fully offline
+  except for this periodic re-check.</p>
+
+  <h2>Permissions the app requests</h2>
+  <ul>
+    <li><strong>Notifications</strong> — to alert you locally when a student crosses your
+      configured balance threshold. This is a local, on-device notification; nothing is sent to a
+      server to trigger it.</li>
+    <li><strong>Storage / file access</strong> (via the system file picker) — only when you choose
+      to export or import a backup or spreadsheet.</li>
+    <li><strong>Phone / dialer</strong> — only when you tap a student's phone number to place a
+      call; the app does not read your call log or contacts.</li>
+    <li><strong>Network</strong> — used exclusively for the access-code/trial validation call
+      described above.</li>
+  </ul>
+
+  <h2>Data sharing</h2>
+  <p>We do not sell, rent, or share your teaching data (groups, students, attendance, payments)
+  with any third party, because we never receive it in the first place. The only data that ever
+  reaches our server is the access code and device identifier described above, used solely to
+  operate the licensing system.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>Your teaching data lives in the app's local database until you delete it — by archiving or
+  deleting groups/students within the app, or by uninstalling the app, which erases its local
+  database entirely (unless you have exported a backup, which is your own separate copy).
+  Access-code/device records on our validation server are retained only for as long as needed to
+  administer your subscription or trial.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Hessati is a tool for teachers/tutors, not a child-facing app. A teacher may enter a minor
+  student's name and phone number for their own record-keeping purposes; this data is handled the
+  same as any other data described above (stored locally, never transmitted by us).</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the "Last updated" date at the top of this page will be revised.
+  Continued use of the app after an update constitutes acceptance of the revised policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data can be sent to
+    <a href="mailto:firas.kordoghli@value.com.tn">firas.kordoghli@value.com.tn</a>.</p>
+</section>
+
+<!-- FRANÇAIS -->
+<section class="lang-section" id="lang-fr" dir="ltr" lang="fr" hidden>
+  <h1>Politique de confidentialité — Hessati</h1>
+  <p class="meta">Dernière mise à jour : 23 juillet 2026</p>
+
+  <p>Hessati (« l'application ») est une application hors-ligne de suivi de présence et de
+  paiements pour les professeurs particuliers et les enseignants de petits groupes. Cette
+  politique explique quelles données l'application traite et, tout aussi important, celles
+  qu'elle ne traite pas.</p>
+
+  <h2>Résumé</h2>
+  <ul>
+    <li>Hessati fonctionne entièrement hors ligne. Toutes les données de groupes, d'élèves, de
+      présence et de paiements que vous saisissez restent sur votre appareil, dans la base de
+      données locale de l'application.</li>
+    <li>Nous n'exploitons aucun système de compte, et il n'y a aucune synchronisation cloud de vos
+      données d'enseignement.</li>
+    <li>L'application effectue exactement un type d'appel réseau — pour valider votre code d'accès
+      ou votre essai gratuit — décrit ci-dessous. Aucune donnée d'élève ou de groupe n'y est jamais
+      incluse.</li>
+    <li>Hessati ne contient aucune publicité ni aucun SDK tiers d'analyse ou de suivi.</li>
+  </ul>
+
+  <h2>Données que vous saisissez dans l'application</h2>
+  <p>Les informations suivantes sont stockées uniquement en local sur votre appareil, dans la base
+  de données propre de l'application :</p>
+  <table>
+    <tr><th>Donnée</th><th>Usage</th><th>Lieu de stockage</th></tr>
+    <tr><td>Noms des groupes</td><td>Organiser les élèves par classe/cours</td><td>Sur l'appareil uniquement</td></tr>
+    <tr><td>Noms des élèves et numéros de téléphone (optionnels)</td><td>Identifier les élèves ; appeler un parent/élève en un tap</td><td>Sur l'appareil uniquement</td></tr>
+    <tr><td>Présences (dates de séance, présent/absent)</td><td>Calculer le solde de chaque élève</td><td>Sur l'appareil uniquement</td></tr>
+    <tr><td>Paiements (séances couvertes, date)</td><td>Calculer le solde de chaque élève</td><td>Sur l'appareil uniquement</td></tr>
+    <tr><td>Paramètres (seuil, langue, thème)</td><td>Personnaliser l'application</td><td>Sur l'appareil uniquement</td></tr>
+  </table>
+  <p>Aucune de ces données n'est transmise où que ce soit, sauf si <strong>vous</strong> décidez
+  volontairement de les exporter (voir « Sauvegarde et export » ci-dessous). Nous, le
+  développeur, ne les recevons jamais et n'avons aucun moyen d'y accéder à distance.</p>
+
+  <h2>Sauvegarde et export (votre action, votre choix)</h2>
+  <p>Hessati vous permet d'exporter une sauvegarde complète (JSON) ou un tableur (CSV/Excel) de vos
+  données via le sélecteur de fichiers standard d'Android. Vous choisissez la destination —
+  stockage local, carte SD, un espace cloud, email, etc. Cela reste entièrement sous votre
+  contrôle ; l'application elle-même ne téléverse ce fichier nulle part. Importer une sauvegarde
+  remplace la base de données locale de l'application par le contenu du fichier, toujours
+  entièrement sur l'appareil.</p>
+
+  <h2>Validation du code d'accès / essai gratuit (le seul appel réseau)</h2>
+  <p>Hessati nécessite un code d'accès fourni par le développeur (ou un essai gratuit unique de 30
+  jours) pour déverrouiller l'application, car elle est distribuée directement par le
+  développeur plutôt que via un abonnement Play Store. Pour vérifier si un code ou un essai est
+  valide, l'application contacte notre serveur de validation avec uniquement :</p>
+  <ul>
+    <li>Le code d'accès que vous avez saisi (ou une demande de démarrage d'essai), et</li>
+    <li>Un identifiant d'appareil, utilisé uniquement pour appliquer la règle d'un code par
+      appareil (ou un nombre limité d'appareils pour les codes multi-appareils) et pour empêcher
+      qu'un même appareil ne réclame plus d'un essai gratuit.</li>
+  </ul>
+  <p>Aucune donnée de groupe, d'élève, de présence ou de paiement n'est jamais incluse dans cet
+  appel. Pendant un essai gratuit actif ou avec un code déjà validé, l'usage quotidien de
+  l'application reste entièrement hors ligne, à l'exception de cette vérification périodique.</p>
+
+  <h2>Autorisations demandées par l'application</h2>
+  <ul>
+    <li><strong>Notifications</strong> — pour vous alerter localement lorsqu'un élève dépasse le
+      seuil de solde que vous avez configuré. Il s'agit d'une notification locale, sur l'appareil ;
+      rien n'est envoyé à un serveur pour la déclencher.</li>
+    <li><strong>Stockage / accès aux fichiers</strong> (via le sélecteur de fichiers du système) —
+      uniquement lorsque vous choisissez d'exporter ou d'importer une sauvegarde ou un tableur.</li>
+    <li><strong>Téléphone / composeur</strong> — uniquement lorsque vous appuyez sur le numéro de
+      téléphone d'un élève pour passer un appel ; l'application ne lit pas votre journal d'appels
+      ni vos contacts.</li>
+    <li><strong>Réseau</strong> — utilisé exclusivement pour l'appel de validation du code
+      d'accès/essai décrit ci-dessus.</li>
+  </ul>
+
+  <h2>Partage des données</h2>
+  <p>Nous ne vendons, ne louons, ni ne partageons vos données d'enseignement (groupes, élèves,
+  présences, paiements) avec des tiers, car nous ne les recevons jamais en premier lieu. Les
+  seules données qui atteignent notre serveur sont le code d'accès et l'identifiant d'appareil
+  décrits ci-dessus, utilisés uniquement pour faire fonctionner le système de licence.</p>
+
+  <h2>Conservation et suppression des données</h2>
+  <p>Vos données d'enseignement résident dans la base de données locale de l'application jusqu'à
+  ce que vous les supprimiez — en archivant ou supprimant des groupes/élèves dans l'application,
+  ou en désinstallant l'application, ce qui efface entièrement sa base de données locale (sauf si
+  vous avez exporté une sauvegarde, qui est votre propre copie séparée). Les enregistrements de
+  code d'accès/appareil sur notre serveur de validation ne sont conservés que le temps nécessaire
+  à la gestion de votre abonnement ou essai.</p>
+
+  <h2>Confidentialité des mineurs</h2>
+  <p>Hessati est un outil destiné aux enseignants/professeurs, pas une application destinée aux
+  enfants. Un enseignant peut saisir le nom et le numéro de téléphone d'un élève mineur à des fins
+  de suivi personnel ; ces données sont traitées comme toute autre donnée décrite ci-dessus
+  (stockées localement, jamais transmises par nous).</p>
+
+  <h2>Modifications de cette politique</h2>
+  <p>Si cette politique change, la date « Dernière mise à jour » en haut de cette page sera
+  révisée. La poursuite de l'utilisation de l'application après une mise à jour vaut acceptation
+  de la politique révisée.</p>
+
+  <h2>Contact</h2>
+  <p>Pour toute question concernant cette politique ou vos données, écrivez à
+    <a href="mailto:firas.kordoghli@value.com.tn">firas.kordoghli@value.com.tn</a>.</p>
+</section>
+
+<!-- العربية -->
+<section class="lang-section" id="lang-ar" dir="rtl" lang="ar" hidden>
+  <h1>سياسة الخصوصية — حصتي</h1>
+  <p class="meta">آخر تحديث: 23 يوليو 2026</p>
+
+  <p>حصتي ("التطبيق") هو تطبيق لتتبع الحضور والمدفوعات يعمل دون اتصال بالإنترنت، مصمم للمدرسين
+  الخصوصيين ومدرّسي المجموعات الصغيرة. توضح هذه السياسة البيانات التي يتعامل معها التطبيق، وربما
+  الأهم من ذلك، ما لا يتعامل معه.</p>
+
+  <h2>ملخص</h2>
+  <ul>
+    <li>يعمل حصتي دون اتصال بالإنترنت بالكامل. تبقى جميع بيانات المجموعات والطلاب والحضور
+      والمدفوعات التي تُدخلها على جهازك، في قاعدة البيانات المحلية الخاصة بالتطبيق.</li>
+    <li>لا نُشغّل أي نظام حسابات، ولا توجد أي مزامنة سحابية لبيانات تدريسك.</li>
+    <li>يقوم التطبيق بنوع واحد فقط من الاتصال بالشبكة — للتحقق من رمز الوصول أو الفترة التجريبية —
+      كما هو موضح أدناه. لا تُدرج أي بيانات طالب أو مجموعة في هذا الاتصال أبدًا.</li>
+    <li>لا يحتوي حصتي على أي إعلانات ولا أي أدوات تحليل أو تتبع من طرف ثالث.</li>
+  </ul>
+
+  <h2>البيانات التي تُدخلها في التطبيق</h2>
+  <p>يتم تخزين المعلومات التالية محليًا على جهازك فقط، في قاعدة بيانات التطبيق الخاصة:</p>
+  <table>
+    <tr><th>البيانات</th><th>الغرض</th><th>مكان التخزين</th></tr>
+    <tr><td>أسماء المجموعات</td><td>تنظيم الطلاب حسب الصف/الدورة</td><td>على الجهاز فقط</td></tr>
+    <tr><td>أسماء الطلاب وأرقام الهواتف (اختياري)</td><td>التعرف على الطلاب؛ الاتصال بولي الأمر/الطالب بلمسة واحدة</td><td>على الجهاز فقط</td></tr>
+    <tr><td>سجلات الحضور (تواريخ الحصص، حاضر/غائب)</td><td>حساب رصيد كل طالب</td><td>على الجهاز فقط</td></tr>
+    <tr><td>سجلات الدفع (الحصص المشمولة، التاريخ)</td><td>حساب رصيد كل طالب</td><td>على الجهاز فقط</td></tr>
+    <tr><td>إعدادات التطبيق (الحد، اللغة، المظهر)</td><td>تخصيص التطبيق</td><td>على الجهاز فقط</td></tr>
+  </table>
+  <p>لا تُرسل أي من هذه البيانات إلى أي مكان إلا إذا قررت <strong>أنت</strong> تصديرها عمدًا (انظر
+  "النسخ الاحتياطي والتصدير" أدناه). نحن، المطوّر، لا نتلقاها أبدًا وليس لدينا أي وسيلة للوصول
+  إليها عن بُعد.</p>
+
+  <h2>النسخ الاحتياطي والتصدير (بمبادرة منك واختيارك)</h2>
+  <p>يتيح لك حصتي تصدير نسخة احتياطية كاملة (JSON) أو جدول بيانات (CSV/Excel) لبياناتك باستخدام
+  منتقي الملفات القياسي في أندرويد. أنت من يختار الوجهة — التخزين المحلي، بطاقة SD، مساحة تخزين
+  سحابية، البريد الإلكتروني، إلخ. يبقى هذا الأمر بالكامل تحت سيطرتك؛ التطبيق نفسه لا يرفع هذا
+  الملف إلى أي مكان. استيراد نسخة احتياطية يستبدل قاعدة بيانات التطبيق المحلية بمحتوى الملف، وهذا
+  أيضًا يتم بالكامل على الجهاز.</p>
+
+  <h2>التحقق من رمز الوصول / الفترة التجريبية (الاتصال الشبكي الوحيد)</h2>
+  <p>يتطلب حصتي رمز وصول صادر عن المطوّر (أو فترة تجريبية مجانية لمرة واحدة مدتها 30 يومًا) لفتح
+  التطبيق، نظرًا لأنه يُوزَّع مباشرة من قبل المطوّر بدلًا من اشتراك عبر متجر Play. للتحقق مما إذا
+  كان الرمز أو الفترة التجريبية صالحة، يتصل التطبيق بخادم التحقق الخاص بنا مع تضمين ما يلي فقط:</p>
+  <ul>
+    <li>رمز الوصول الذي أدخلته (أو طلب بدء فترة تجريبية)، و</li>
+    <li>معرّف الجهاز، يُستخدم فقط لتطبيق قاعدة رمز واحد لكل جهاز (أو عدد محدود من الأجهزة بالنسبة
+      للرموز متعددة الأجهزة) ولمنع مطالبة الجهاز نفسه بأكثر من فترة تجريبية مجانية واحدة.</li>
+  </ul>
+  <p>لا تُدرج أي بيانات عن المجموعات أو الطلاب أو الحضور أو المدفوعات في هذا الاتصال أبدًا. أثناء
+  فترة تجريبية نشطة أو رمز تم التحقق منه مسبقًا، يبقى الاستخدام اليومي للتطبيق دون اتصال بالكامل
+  باستثناء هذا التحقق الدوري.</p>
+
+  <h2>الأذونات التي يطلبها التطبيق</h2>
+  <ul>
+    <li><strong>الإشعارات</strong> — لتنبيهك محليًا عند تجاوز أحد الطلاب لحد الرصيد الذي حددته.
+      هذا إشعار محلي على الجهاز؛ لا يُرسل شيء إلى خادم لتفعيله.</li>
+    <li><strong>التخزين / الوصول إلى الملفات</strong> (عبر منتقي ملفات النظام) — فقط عند اختيارك
+      تصدير أو استيراد نسخة احتياطية أو جدول بيانات.</li>
+    <li><strong>الهاتف / الاتصال</strong> — فقط عند النقر على رقم هاتف طالب لإجراء مكالمة؛ لا
+      يقرأ التطبيق سجل مكالماتك ولا جهات اتصالك.</li>
+    <li><strong>الشبكة</strong> — تُستخدم حصريًا لاتصال التحقق من رمز الوصول/الفترة التجريبية
+      الموضح أعلاه.</li>
+  </ul>
+
+  <h2>مشاركة البيانات</h2>
+  <p>نحن لا نبيع ولا نؤجر ولا نشارك بيانات تدريسك (المجموعات، الطلاب، الحضور، المدفوعات) مع أي
+  طرف ثالث، لأننا لا نتلقاها أصلًا. البيانات الوحيدة التي تصل إلى خادمنا هي رمز الوصول ومعرّف
+  الجهاز الموضحان أعلاه، وتُستخدم فقط لتشغيل نظام الترخيص.</p>
+
+  <h2>الاحتفاظ بالبيانات وحذفها</h2>
+  <p>تبقى بيانات تدريسك في قاعدة البيانات المحلية للتطبيق إلى أن تحذفها — عن طريق أرشفة أو حذف
+  المجموعات/الطلاب داخل التطبيق، أو عن طريق إلغاء تثبيت التطبيق، مما يمحو قاعدة بياناته المحلية
+  بالكامل (ما لم تكن قد صدّرت نسخة احتياطية، وهي نسخة منفصلة خاصة بك). تُحفظ سجلات رمز
+  الوصول/الجهاز على خادم التحقق لدينا فقط للمدة اللازمة لإدارة اشتراكك أو فترتك التجريبية.</p>
+
+  <h2>خصوصية القُصَّر</h2>
+  <p>حصتي أداة موجهة للمدرسين/المعلمين، وليس تطبيقًا موجهًا للأطفال. قد يُدخل المعلم اسم ورقم
+  هاتف طالب قاصر لأغراض حفظ سجلاته الخاصة؛ تُعامَل هذه البيانات كأي بيانات أخرى موضحة أعلاه
+  (تُخزَّن محليًا، ولا تُنقل من قبلنا أبدًا).</p>
+
+  <h2>التغييرات على هذه السياسة</h2>
+  <p>إذا تغيرت هذه السياسة، سيتم تحديث تاريخ "آخر تحديث" أعلى هذه الصفحة. يُعد استمرار استخدام
+  التطبيق بعد أي تحديث بمثابة قبول للسياسة المعدَّلة.</p>
+
+  <h2>التواصل</h2>
+  <p>للأسئلة المتعلقة بهذه السياسة أو ببياناتك، يمكن المراسلة على
+    <a href="mailto:firas.kordoghli@value.com.tn">firas.kordoghli@value.com.tn</a>.</p>
+</section>
+
+<script>
+  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang');
+      document.querySelectorAll('.lang-switch button').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      document.querySelectorAll('.lang-section').forEach(function (sec) {
+        sec.hidden = sec.id !== 'lang-' + lang;
+      });
+      document.documentElement.lang = lang;
+    });
+  });
+</script>
+
+</body>
+</html>
